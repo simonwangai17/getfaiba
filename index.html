@@ -1,3 +1,72 @@
-<html>
-  <head></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetFaiba</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <img src="logo_faiba.png" alt="Logo" class="logo">
+    <div class="title">Get Faiba</div>
+    
+    <form id="myForm" action="submit_form.php" method="post" onsubmit="return submitForm()">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">First Name</span>
+                <input id="firstName" type="text" placeholder="James" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Last Name</span>
+                <input id="lastName" type="text" placeholder="Mwangi" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Email Address</span>
+                <input id="email" type="email" placeholder="name@example.com" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Contact Number</span>
+                <input id="contactNumber" type="number" placeholder="2547 ----" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Location</span>
+                <input id="location" type="text" placeholder="Place you live" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Phone Model</span>
+                <input id="phoneModel" type="text" placeholder="Phone Type" required>
+            </div>
+        </div>
+        <!---
+        <div class="gender-details">
+            <span class="gender-title">Choose Service</span>
+            <div class="category">
+                <label>
+                    <input type="radio" name="service" value="Faiba Mobile" required>
+                    <span class="gender">Faiba Mobile</span>
+                </label>
+                <label>
+                    <input type="radio" name="service" value="Faiba Fixed" required>
+                    <span class="gender">Faiba Fixed</span>
+                </label>
+            </div>
+        </div> -->
+        <div class="button">
+          <input type="button" value="Submit Request" onclick="submitForm()">
+        </div>
+    </form>
+</div>
+
+<div id="notification" class="notification" style="display: none">
+    <div class="notification-content">
+        <span class="close-btn">&times;</span>
+        <p>Email sent successfully!</p>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+</body>
 </html>
